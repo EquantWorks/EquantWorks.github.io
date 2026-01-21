@@ -7,6 +7,7 @@
     <title>Equant Works</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="app.ico" />
     <style>
         .tab-content {
             display: none;
@@ -23,31 +24,62 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        div>a{
-
-        }
 
         a:hover {
             text-decoration: underline; /* 悬停时显示下*/
         }
+         body {
+     background-color: white;
+ }
+
+ #tab1, #tab2,#tab3{
+     font-size:18px;
+     /*color:white;*/
+
+ }
+
+     /*#tab1:hover, #tab2:hover, #tab3:hover{
+         color:#F78119;
+     }*/
+
+     pre {
+         font-family: 'Times New Roman', serif;
+     }
+
+ #head {
+     /*background: linear-gradient(to left, #2c3e50, #7f8c8d, #bdc3c7, #ecf0f1);*/
+     background:#eeeeee;
+ }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100">
+<!-- from-blue-50  -->
+<body class="bg-gradient-to-br to-indigo-100">
 
-    <div class="container mx-auto p-6">
-        <!--<h1 class="text-3xl font-bold text-center mb-6 text-gray-800">标签页切换页面</h1>-->
-        <!-- 标签导航 -->
-        <div class="flex border-b border-gray-300 mb-6 bg-white rounded-t-lg shadow-sm">
-            <button id="tab1" class="py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none rounded-tl-lg">Product Overview</button>
-            <button id="tab2" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none">Download</button>
-            <button id="tab3" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none rounded-tr-lg">Online Help</button>
-            <!--<button id="tab4" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none rounded-tr-lg">Online Help(html)</button>-->
+    
+
+    <div class="container mx-auto p-6" style="width:65%">
+
+        <!-- 页签部分 --><!--style="background-color:#EEEEEE"-->
+        <div id="head" class="flex border-b border-gray-300 mb-6 bg-white rounded-t-lg shadow-sm">
+            <div class="ml-auto flex">
+                <button id="tab1" class="py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none rounded-tl-lg hover:text-blue-600">Product Overview</button>
+                <button id="tab2" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none">Download</button>
+                <button id="tab3" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none rounded-tr-lg">Online Help</button>
+
+            </div>
         </div>
 
-        <!-- 页面内容 -->
+        <!--<h1 class="text-3xl font-bold text-center mb-6 text-gray-800">标签页切换页面</h1>-->
+        <!-- 标签导航 -->
+        <!--<div class="flex border-b border-gray-300 mb-6 bg-white rounded-t-lg shadow-sm" style="background-color:#EEEEEE">
+        <button id="tab1" class="py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none rounded-tl-lg">Product Overview</button>
+        <button id="tab2" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none">Download</button>
+        <button id="tab3" class="py-3 px-6 font-medium text-gray-600 hover:text-blue-600 focus:outline-none rounded-tr-lg">Online Help</button>
+    </div>-->
+        <!-- Product Overview 部分 -->
         <div id="page1" class="tab-content active">
             <!-- <h2 class="text-2xl font-semibold mb-4 text-gray-700">Product Overview</h2>-->
-            <pre style=" white-space: pre-wrap; /* 允许文本内部换行 */ width: 90%; /* 设置一个固定宽度 */ overflow-x: auto; /* 水平方向超出时显示滚动条 */">
+            <pre style=" white-space: pre-wrap; /* 允许文本内部换行 */ width: 100%; /* 设置一个固定宽度 */ overflow-x: auto; /* 水平方向超出时显示滚动条 */">
 <span style="font-size:30px;font-weight:700">Preface: Product Overview</span>
 ​Equant Works is a next-generation document management platform focusing on content enhancement and engineering workflows. Unlike traditional office software, Equant Works is designed to complement existing tools while providing specialized depth for industry scenarios. It features built-in construction estimation templates designed to significantly improve calculation efficiency.
  
@@ -64,30 +96,30 @@
 10、Built-in Estimation Templates: Includes standard templates such as Takeoff Sheets and Bill of Quantities (BOQ) for rapid project setup.                
             </pre>
         </div>
+
+        <!-- Download 部分 -->
         <div id="page2" class="tab-content">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Download Help Files</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-gray-700">Download Files</h2>
             <div style="color: #2592F3; margin-bottom: 15px;">
-                <a class="link-container" href="help-en.pdf" download="help-en.pdf">Download PDF files</a>
-             </div>
-            <div style="color: #2592F3; margin-bottom: 15px;">
-                 <a class="link-container" href="help-en.docx" download="help-en.docx">Download DOCX files</a>
-            </div>            
-            <div style="color: #2592F3; margin-bottom: 15px;">
-                 <a class="link-container" href="Drawing1.dwg" download="Drawing1.dwg">Download Dwg files</a>
+                <a class="link-container" href="help-en.pdf" download="help-en.pdf">Download PDF Files</a>
             </div>
-         </div>
-        
+            <div style="color: #2592F3; margin-bottom: 15px;">
+                <a class="link-container" href="help-en.docx" download="help-en.docx">Download DOCX Files</a>
+            </div>
+        </div>
+
+        <!-- Online 部分 -->
         <div id="page3" class="tab-content">
             <!--#toolbar=0：隐藏工具栏
-    #navpanes=0：隐藏侧边栏
-    #zoom=scale：设置缩放级别（如 #zoom=150）
-    #page=number：指定打开页码（如 #page=3）
-    #view=Fit：适应屏幕尺寸-->
-            <iframe src="help-en.pdf#navpanes=1&pagemode=bookmarks" class="tab-iframe" title="Online Help"></iframe>
+        #navpanes=0：隐藏侧边栏
+        #zoom=scale：设置缩放级别（如 #zoom=150）
+        #page=number：指定打开页码（如 #page=3）
+        #view=Fit：适应屏幕尺寸-->
+            <iframe src="help-en.pdf#pagemode=bookmarks&navpanes=1" class="tab-iframe" title="Online Help"></iframe>
         </div>
         <!--<div id="page4" class="tab-content">
-            <iframe src="help.html" class="tab-iframe" title="Online Help"></iframe>
-        </div>-->
+        <iframe src="help.html" class="tab-iframe" title="Online Help"></iframe>
+    </div>-->
     </div>
 
     <script>
@@ -119,6 +151,7 @@
 </body>
 
 </html>
+
 
 
 
